@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- <div id="loading-indicator">
+      loading
+    </div> -->
+    <div class="main">
+      
+      <!-- <div class="menu-toggle">
+        <div class="menu"><i class="ri-menu-fold-4-fill"></i></div>
+        <div class="nav-list">
+          <a href=""><li>Home</li></a>
+          <a href=""><li>Logout</li></a>
+        </div>
+      </div> -->
+
+      <div class="logout">
+        <a href="/logout"><button>Logout</button></a>
+      </div>
+      <div class="nav-bar">
+        <div class="user">
+          <div class="profile-pic"><img src="https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg" alt="" /></div>
+          <div class="profile-info">
+            <div class="uname" translate="no"><%=user.username%></div>
+            <div class="user-others">Ward: <%=user.ward%></div>
+          </div>
+        </div>
+        <div class="menu"><i class="ri-menu-unfold-4-line"></i></div>
+      </div>
+
+      <div class="content-area">
+        <div class="slider">
+          <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="banner" style="padding-bottom: 7vw;">
+          <h1 style="font-size: 7vw; font-weight: 500; line-height: 130%; width: 70%;">Welcome to <br><span style="font-size: 7vw; font-weight: 700; color: #fff;">Ward No. <%=user.ward%></span></h1>
+          <h2 style="font-size: 3.5vw;font-weight: 600; margin-top: 1vw;">Keep Updated on Resolved and Ongoing Community Matters</h2>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1667637089198-4c699979b5bf?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1631116616300-9e0ccff74a66?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div> -->
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>
+        <div class="options">
+          <div class="page-title">
+            <h4>Ward Management</h4>
+            <p>(Select below options)</p>
+          </div>
+          <div class="wrapper" style="padding-bottom: 70px;">
+           <a href="/issue-mang">
+            <div class="option">
+              <div class="topic">
+                <h5>Issue Management</h5>
+                <p></p>
+              </div>
+              <div class="logo"><img src="/images/undraw_add_files_re_v09g.svg" alt=""></div>
+            </div>
+           </a>
+
+           <a href="/chooseward/<%=user.ward%>">
+            <div class="option">
+              <div class="topic">
+                <h5>Work Management</h5>
+                <p></p>
+              </div>
+              <div class="logo"><img src="/images/undraw_qa_engineers_dg-5-p.svg" alt=""></div>
+            </div>
+          </a>
+           <a href="read/view/info/<%=user.ward%>">
+            <div class="option">
+              <div class="topic">
+                <h5>View Information</h5>
+                <p></p>
+              </div>
+              <div class="logo"><img src="/images/undraw_qa_engineers_dg-5-p.svg" alt=""></div>
+            </div>
+          </a>
+          </div>
+         
+        </div>
+      </div>
+       
+      <!-- <script>
+        window.onload = function() {
+  // Hide the loading indicator
+  document.getElementById("loading-indicator").style.display = "none";
+  
+  // Show the page content
+  document.getElementById("page-content").style.display = "block";
+};
+      </script> -->
+      <%- include('Partials/nabBottom') %>

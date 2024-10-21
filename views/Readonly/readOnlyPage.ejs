@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="main">
+      <!-- <div class="menu-toggle">
+        <div class="menu"><i class="ri-menu-fold-4-fill"></i></div>
+        <div class="nav-list">
+          <a href=""><li>Home</li></a>
+          <a href=""><li>Logout</li></a>
+        </div>
+      </div> -->
+
+      <div class="logout">
+        <a href="/logout"><button>Logout</button></a>
+      </div>
+      <div class="nav-bar">
+        <div class="user">
+           <!-- Logo -->
+          <div class="profile-info">
+            <div class="uname">VIEW INFORMATION</div>
+            <div class="user-others">WARD: <%=user.ward%></div>
+          </div>
+        </div>
+        <div class="menu" style="display: none;"><i class="ri-menu-unfold-4-line"></i></div>
+      </div>
+
+      <div class="content-area ward-list">
+
+       <a style="text-decoration: none; color: #000;" href="/read-colony/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/building-construction-education-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Colony Names</span>
+        </div>
+      </a>
+
+      
+      <a style="text-decoration: none; color: #000;" href="/read-hospital/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/hospital-healthcare-and-medical-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Hospitals</span>
+        </div>
+      </a>
+
+      
+      <a style="text-decoration: none; color: #000;" href="/read-mandir/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/hindu-temple-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Mandir</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-mosque/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/mosque-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Masjid</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-gurudawara/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/sikhism-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Guru Dwara</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-church/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/church-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Church</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-school/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/school-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">School</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-booth/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/booth-svgrepo-com.svg" alt=""></div>
+        <span class="list-names">Booth</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-ganpatisamiti/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/icons8-ganesha-64.png" alt=""></div>
+        <span class="list-names">Ganpati Samiti</span>
+        </div>
+      </a>
+      
+      <a style="text-decoration: none; color: #000;" href="/read-durgasamiti/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/DURGA.png" alt=""></div>
+        <span class="list-names">Durga Samiti</span>
+        </div>
+      </a>
+
+      <!-- ------------------- -->
+      
+      <a style="text-decoration: none; color: #000;" href="/read-gayatriparivar/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/SAWASTIK.png" alt=""></div>
+        <span class="list-names">Gayatri Parivar</span>
+        </div>
+      </a>      
+
+      <a style="text-decoration: none; color: #000;" href="/read-bkumari/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/BKUMARI.png" alt=""></div>
+        <span class="list-names">Bhramahkumari</span>
+        </div>
+      </a>
+            
+      <a style="text-decoration: none; color: #000;" href="/read-dharmiksangathan/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/GROU[.png" alt=""></div>
+        <span class="list-names">Dharmik Sangathan</span>
+        </div>
+      </a>
+            
+      <a style="text-decoration: none; color: #000;" href="/read-bhajankirtantoli/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/TABLA.png" alt=""></div>
+        <span class="list-names">Bhajhan Kirtan toli</span>
+        </div>
+      </a>
+            
+      <a style="text-decoration: none; color: #000;" href="/read-madarse/<%= wardNumber %>"><div class="list">
+        <div class="dp"><img src="/images/icons8-meditation-16.png" alt=""></div>
+        <span class="list-names">मदरसे</span>
+        </div>
+      </a>
+      
+        </div>
+       
+         
+        </div>
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <a href="/goback"> <li class="bnav" onclick="toggleActive(this)"><i class="ri-arrow-left-line"></i> <span>Prev</span></li></a>
+      <a href="/read/view/info/<%=user.ward%>"> <li class="bnav" onclick="toggleActive(this)"><i class="ri-eye-line"></i> <span>View</span></li></a>
+      <a href="/"> <li class="bnav homeNav" onclick="toggleActive(this)"><i class="ri-home-line"></i> <span>Home</span></li></a>
+      <a href="/chooseward/<%=user.ward%>"> <li class="bnav" onclick="toggleActive(this)"><i class="ri-add-box-line"></i> <span>Add</span></li></a>
+      <a href="#"> <li class="bnav" onclick="toggleActive(this)"><i class="ri-alarm-warning-line"></i> <span>Issue</span></li></a>
+     </div>
+   </div>
+</body> 
+  <!--google trnslator api-->
+  <%- include('../Partials/nabBottom') %>
+

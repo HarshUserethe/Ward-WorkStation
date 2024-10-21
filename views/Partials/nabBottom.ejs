@@ -1,0 +1,57 @@
+<div class="bottom-nav">
+    <a href="/goback"> <li class="bnav"><i class="ri-arrow-left-line"></i> <span>Prev</span></li></a>
+    <a href="/read/view/info/<%=user.ward%>"> <li class="bnav" ><i class="ri-eye-line" id="view"></i> <span>View</span></li></a>
+    <a href="/"> <li class="bnav homeNav"><i class="ri-home-line"></i> <span>होम</span></li></a>
+    <a href="/chooseward/<%=user.ward%>"> <li class="bnav"><i class="ri-add-box-line"></i> <span>Add</span></li></a>
+    <a href="/issue-mang"> <li class="bnav"><i class="ri-alarm-warning-line"></i> <span>Issue</span></li></a>
+   </div>
+ </div>
+
+ <!--google trnslator api-->
+ <script type="text/javascript">
+  function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            autoDisplay: false,
+            includedLanguages: "hi,en",
+          },
+          "google_translate_element"
+        );
+      }
+
+const home = document.querySelector('.ri-home-line');
+const view = document.querySelector('#view');
+const add = document.querySelector('.ri-add-box-line');
+const issue = document.querySelector('.ri-alarm-warning-line');
+
+
+
+window.addEventListener('load', function() {
+    var match = window.location.pathname.match(/\/(\d+)$/);
+    var number = match ? match[1] : null;
+
+    if (window.location.pathname === '/') {
+        home.style.color = "orangered";
+    } else if (number && window.location.pathname === `/read/view/info/${number}`) {
+        view.style.color = "orangered";
+    } else if (number && window.location.pathname === `/chooseward/${number}`) {
+        add.style.color = "orangered";
+    } else if (window.location.pathname === '/issue-mang') {
+        issue.style.color = "orangered";
+    }
+});
+
+
+
+  
+</script>
+ <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="/javascripts/swipercode.js"></script>
+ <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+</body>
+</html>

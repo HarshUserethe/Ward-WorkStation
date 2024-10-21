@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="google_translate_element"></div>
+    <div class="main">
+      <!-- <div class="menu-toggle">
+        <div class="menu"><i class="ri-menu-fold-4-fill"></i></div>
+        <div class="nav-list">
+          <a href=""><li>Home</li></a>
+          <a href=""><li>Logout</li></a>
+        </div>
+      </div> -->
+
+      <div class="logout">
+        <a href=""><button>Logout</button></a>
+      </div>
+      <div class="nav-bar">
+        <div class="user">
+          <div class="profile-pic"><img src="https://plus.unsplash.com/premium_photo-1681426472026-60d4bf7b69a1?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></div>
+          <div class="profile-info">
+            <div class="uname">User Name</div>
+            <div class="user-others">Address Or Other</div>
+          </div>
+        </div>
+        <div class="menu"><i class="ri-menu-unfold-4-line"></i></div>
+      </div>
+
+      <div class="content-area ward-list">
+
+       <form action="/add-colony/<%=user.ward%>" method="post">
+        
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">COLONY NAME</label>
+          <input class="form-control" name="colonyname" type="text" value="<%=%>" placeholder="Default input" aria-label="default input example">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">MOHALLA (IF ANY)</label>
+          <input class="form-control" name="mohalla" type="text" placeholder="Default input" aria-label="default input example">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">SEEMACHINH (IF ANY)</label>
+          <input class="form-control" name="landmark" type="text" placeholder="Default input" aria-label="default input example">
+        </div>
+        <!-- <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ward Number</label>
+          <input class="form-control" name="user.ward" value="<%=user.ward%>" type="text" readonly aria-label="default input example">
+        </div> -->
+
+        <div id="container">
+          <button type="button" class="updateButton" id="addBtn">Add Members</button>
+        </div>
+
+        <div class="button-wrapper">
+          <input class="updateButton" type="submit" value="Update">
+          <button class="cancelButton" type="button" onclick="window.location.href='/chooseward/<%= user.ward %>'">Cancel</button>
+        </div>
+        
+       </form>
+      
+        </div>
+       
+         
+        </div>
+      </div>
+    </div>
+
+</body> 
+<script>
+  document.getElementById('addBtn').addEventListener('click', addUser);
+
+function addUser() {
+  // Check if the maximum limit of users (10) has been reached
+  if (document.querySelectorAll('.user-input').length >= 10) {
+    alert('You have reached the maximum limit of users (10)');
+    return;
+  }
+  
+  const container = document.getElementById('container');
+  
+  // Create user input fields
+  const userInput = document.createElement('div');
+  userInput.className = 'user-input';
+  userInput.innerHTML = `
+    <input class="addUser" type="text" name="memberName" placeholder="Member Name">
+    <input class="addUser" type="tel" name="mobileNumber" placeholder="Mobile Number">
+    <button class="removeBtn">Remove</button>
+  `;
+  
+  // Add event listener to remove button
+  userInput.querySelector('.removeBtn').addEventListener('click', () => {
+    container.removeChild(userInput);
+  });
+  
+  container.appendChild(userInput);
+}
+</script>
+  <!--google trnslator api-->
+  <script
+  type="text/javascript"
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+ <script src="/javascripts/translate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/javascripts/swipercode.js"></script>
+  </body>
+</html>

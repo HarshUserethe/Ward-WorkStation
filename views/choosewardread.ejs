@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="main">
+      <!-- <div class="menu-toggle">
+        <div class="menu"><i class="ri-menu-fold-4-fill"></i></div>
+        <div class="nav-list">
+          <a href=""><li>Home</li></a>
+          <a href=""><li>Logout</li></a>
+        </div>
+      </div> -->
+
+      <div class="logout">
+        <a href=""><button>Logout</button></a>
+      </div>
+      <div class="nav-bar">
+        <div class="user">
+          <div class="profile-pic"><img src="https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg" alt="" /></div>
+          <div class="profile-info">
+            <div class="uname">User Name</div>
+            <div class="user-others">Address Or Other</div>
+          </div>
+        </div>
+        <div class="menu"><i class="ri-menu-unfold-4-line"></i></div>
+      </div>
+
+      <div class="content-area">
+        <div class="slider">
+          <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://plus.unsplash.com/premium_photo-1667637089198-4c699979b5bf?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1631116616300-9e0ccff74a66?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>
+        <div class="options">
+          <div class="page-title">
+            <h4>Ward Number</h4>
+            <p>(Select Ward Number)</p>
+          </div>
+          <div class="wrp">
+          <div class="drop-down-container">
+            <select id="wardSelect" class="form-select" aria-label="Default select example">
+                <option selected>Select your ward number</option>
+                <option value="50">Ward-50</option>
+                <option value="51">Ward-51</option>
+                <option value="52">Ward-52</option>
+                <option value="53">Ward-53</option>
+                <option value="54">Ward-54</option>
+                <option value="55">Ward-55</option>
+              </select>
+
+             <button id="enterButton">Enter</button>
+          </div>
+        </div>
+       
+         
+        </div>
+      </div>
+    </div>
+
+</body> 
+<script>
+  document.getElementById('enterButton').addEventListener('click', function() {
+    var selectedWard = document.getElementById('wardSelect').value;
+    window.location.href = "/read/view/info/" + selectedWard;
+  });
+</script>
+  <!--google trnslator api-->
+  <script
+  type="text/javascript"
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/javascripts/swipercode.js"></script>
+    <script src="/javascripts/translate.js"></script>
+  </body>
+</html>
